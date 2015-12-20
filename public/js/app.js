@@ -5,8 +5,10 @@ socket.on('connect', function () {
 });
 
 socket.on('message', function (message) {
-	console.log('New msg: ');
-	console.log(message.text);
+	console.log('New msg: '+message.text);
+
+	jQuery('.messages').append('<p>' + message.text + '</p>');
+
 });
 
 // Handles subbmitting of new message

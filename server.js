@@ -11,13 +11,13 @@ io.on('connection', function (socket) {
 
 	socket.on('message', function (message) {
 		console.log('Message received: ' + message.text);
-		// io.emit - 
-		socket.broadcast.emit('message', message);
+
+		io.emit('message', message);
 	});
 
-	// socket.emit('message', {
-	// 	text: 'Welcome to the chat app!'
-	// });
+	socket.emit('message', {
+		text: 'Welcome to the chat app!'
+	});
 
 });
 

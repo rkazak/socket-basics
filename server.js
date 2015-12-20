@@ -15,9 +15,10 @@ io.on('connection', function (socket) {
 		socket.broadcast.emit('message', message);
 	});
 
-	socket.emit('message', {
-		text: 'Welcome to the chat app!'
-	});
+	// socket.emit('message', {
+	// 	text: 'Welcome to the chat app!'
+	// });
+
 });
 
 http.listen(PORT, function() {

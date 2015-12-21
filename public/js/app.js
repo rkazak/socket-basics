@@ -5,9 +5,10 @@ socket.on('connect', function () {
 });
 
 socket.on('message', function (message) {
+	var ts = moment.utc(message.ts);
 	console.log('New msg: '+message.text);
 
-	jQuery('.messages').append('<p>' + message.text + '</p>');
+	jQuery('.messages').append('<p>' + ts.local().format("h:mma") + ' ' + message.text + '</p>');
 
 });
 
@@ -24,5 +25,4 @@ $form.on('submit', function () {
 	});
 
 	$msg.val('');
-
 });

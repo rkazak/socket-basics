@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>Socket.io Basics</title>
 	</head>	
+
 	<body>
+		<h1 class="room-title"> <!-- room name via jquery --></h1>
 		<div class="messages" >
 			<!-- Message area -->
 		</div>
+
 		<form id="message_form">
 			<input type="text" name="message"/>
 			<input type="submit"/>
 		</form>
+
 		<a href="/index.html">Change Details</a>
+
 		<script src="/js/jquery-2.1.4.js"></script>
 		<script src="/js/socket.io.js"></script>
 		<script src="/js/moment.js"></script>

@@ -9,7 +9,7 @@ now.subtract(1, 'year');
 
 console.log(now.format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
-console.log(now.format("MMM do YYYY, h:ma"));
+console.log(now.format("MMM do YYYY, h:mma"));
 
 console.log(now.format("X"));
 

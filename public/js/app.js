@@ -19,7 +19,7 @@ socket.on('message', function (message) {
 	var ts = moment.utc(message.ts);
 	console.log('New msg: '+message.text);
 	var $messages = jQuery('.messages');
-	var $message = jGquery('<li class="list-group-item"> </li>')
+	var $message  = jQuery('<li class="list-group-item"> </li>')
 	$message.append('<p><strong>' + message.name + ' ' + ts.local().format("h:mma") + '</strong></p>')	
 	$message.append('<p>' + message.text + '</p>');
 	$messages.append($message);
